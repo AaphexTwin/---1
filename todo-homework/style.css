@@ -1,0 +1,109 @@
+/* Общие стили страницы */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    color: #252044;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 28px;
+}
+
+/* Фиолетовая доска и её колонки */
+.board {
+    display: flex;
+    gap: 24px;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: #2e1b83;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #d8d0fb;
+}
+
+h2 {
+    margin: 0 0 16px;
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Карточка задачи */
+.task {
+    padding: 18px 14px;
+    border-radius: 8px;
+    background-color: #f7f5ff;
+}
+
+h3 {
+    margin: 0 0 18px;
+    font-size: 14px;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.priority {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.high {
+    background-color: #fbd8e2;
+    color: #a51e49;
+}
+
+.medium {
+    background-color: #ffefb4;
+    color: #755400;
+}
+
+.low {
+    background-color: #dedfff;
+    color: #3e3c95;
+}
+
+/* На телефоне колонки располагаются друг под другом */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 16px;
+    }
+
+    .board {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+}
